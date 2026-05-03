@@ -11,6 +11,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background: hsl(185, 75%, 39%);
   min-height: 100vh;
+  overflow: hidden;
 }
 body::before {
   content: "";
