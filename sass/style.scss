@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
+
+$main-color: hsl(185, 75%, 39%);
+$dark-color: hsl(229, 23%, 23%);
+$accent-color: hsl(227, 10%, 46%);
+$background-card: hsl(225, 10%, 92%);
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: $main-color;
+  min-height: 100vh;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 30%;
+    right: 50%;
+    min-width: 1300px;
+    min-height: 1300px;
+    background-image: url("../docs/images/bg-pattern-top.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    min-width: 1300px;
+    min-height: 1300px;
+    background-image: url("../docs/images/bg-pattern-bottom.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
+h1,
+h2,
+.profil {
+  font-size: 18px;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $background-card;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 500px;
+  width: 90%;
+
+  header {
+    position: relative;
+    height: 150px;
+    background-image: url("../docs/images/bg-pattern-card.svg");
+    background-size: cover;
+    background-position: center;
+
+    .profil-photo {
+      position: absolute;
+      bottom: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 0.5rem solid $background-card;
+      border-radius: 50%;
+    }
+  }
+
+  .profil {
+    text-align: center;
+    margin-top: 4.5rem;
+    border-bottom: 1px solid lightgrey;
+
+    h1 {
+      span {
+        font-weight: 400;
+        color: $accent-color;
+      }
+    }
+
+    address {
+      font-style: normal;
+      color: $accent-color;
+      font-size: 16px;
+      margin: 0.5rem 0 1.5rem;
+    }
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    .stat {
+      margin: 1.5rem 0.5rem 0 0.5rem;
+      p {
+        margin-top: 0.3rem;
+        color: $accent-color;
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+}
